@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #222222;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #222222;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+}
+
+.light {
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-card: #f5f5f5;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #5558e3;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid #333;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.category-reading {
+  color: #10b981;
+}
+
+.category-work {
+  color: #3b82f6;
+}
+
+.category-school {
+  color: #a855f7;
+}
+
+.category-business {
+  color: #f97316;
+}
+
+.category-daily {
+  color: #ec4899;
+}
+
+.bg-reading {
+  background-color: #10b981;
+}
+
+.bg-work {
+  background-color: #3b82f6;
+}
+
+.bg-school {
+  background-color: #a855f7;
+}
+
+.bg-business {
+  background-color: #f97316;
+}
+
+.bg-daily {
+  background-color: #ec4899;
+}
+
+.react-quill {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+}
+
+.react-quill .ql-toolbar {
+  background-color: var(--bg-secondary);
+  border-radius: 12px 12px 0 0;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.react-quill .ql-container {
+  border: none;
+  min-height: 200px;
+}
+
+.react-quill .ql-editor {
+  color: var(--text-primary);
+  min-height: 200px;
+}
+
+.react-quill .ql-stroke {
+  stroke: var(--text-secondary);
+}
+
+.react-quill .ql-fill {
+  fill: var(--text-secondary);
+}
+
+.react-quill .ql-picker {
+  color: var(--text-secondary);
+}
+
+.react-quill .ql-picker-options {
+  background-color: var(--bg-card);
+  border: 1px solid #333;
+}
+
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-color: #333;
+}
+
+.ql-container.ql-snow {
+  border: none;
+}
+
+.ql-snow .ql-editor blockquote {
+  border-left-color: #6366f1;
+}
+
+.ql-snow .ql-editor pre.ql-syntax {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
